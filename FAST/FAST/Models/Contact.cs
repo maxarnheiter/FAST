@@ -12,10 +12,10 @@ namespace FAST.Models
         public int ID { get; set; }
 
         [Display(Name="First Name")]
-        public string FirstName;
+        public string FirstName { get; set; }
 
         [Display(Name = "Last Name")]
-        public string LastName;
+        public string LastName { get; set; }
 
 
     }

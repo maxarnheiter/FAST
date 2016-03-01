@@ -79,3 +79,4 @@ T:\Development\FAST\FAST\FAST\bin\Microsoft.Owin.Security.Twitter.xml
 T:\Development\FAST\FAST\FAST\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 T:\Development\FAST\FAST\FAST\obj\Debug\FAST.dll
 T:\Development\FAST\FAST\FAST\obj\Debug\FAST.pdb
+T:\Development\FAST\FAST\FAST\obj\Debug\FAST.csprojResolveAssemblyReference.cache

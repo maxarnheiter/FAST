@@ -15,9 +15,10 @@ namespace FAST.Controllers
         private ContactDBContext db = new ContactDBContext();
 
         // GET: Contacts
+        [Authorize]
         public ActionResult Index()
         {
-            return View(db.Contacts.ToList());
+            return View(db.Contacts.ToList()); ;
         }
 
         // GET: Contacts/Details/5
@@ -46,8 +47,10 @@ namespace FAST.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID")] Contact contact)
+        public ActionResult Create([Bind(Include = "ID,FirstName,LastName")] Contact contact)
         {
+            
+
             if (ModelState.IsValid)
             {
                 db.Contacts.Add(contact);

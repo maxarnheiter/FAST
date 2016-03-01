@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using System.Data.Entity;
+using FAST.Models;
 
 namespace FAST
 {
@@ -16,6 +18,10 @@ namespace FAST
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            Database.SetInitializer<ContactDBContext>(new DropCreateDatabaseIfModelChanges<ContactDBContext>());
+            Database.SetInitializer<GroupsDBContext>(new DropCreateDatabaseIfModelChanges<GroupsDBContext>());
+            Database.SetInitializer<CompaniesDBContext>(new DropCreateDatabaseIfModelChanges<CompaniesDBContext>());
         }
     }
 }

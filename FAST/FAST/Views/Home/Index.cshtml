@@ -6,3 +6,36 @@
     <h1>FAST</h1>
     <p class="lead">Welcome to FAST - the ultra-quick contact management system (CMS).</p>
 </div>
+
+@if(Request.IsAuthenticated)
+{
+
+    <div class="row">
+
+        <div class="col-md-4">
+            
+            <p>@Html.ActionLink("Contacts", "Index", "Contacts")</p>
+            <p>[@Html.Raw(ViewBag.ContactsCount)]</p>
+        </div>
+
+        <div class="col-md-4">
+            <p>@Html.ActionLink("Companies", "Index", "Companies")</p>
+            <p>[@Html.Raw(ViewBag.CompaniesCount)]</p>
+        </div>
+
+        <div class="col-md-4">
+            <p>@Html.ActionLink("Groups", "Index", "Groups")</p>
+            <p>[@Html.Raw(ViewBag.GroupsCount)]</p>
+        </div>
+
+    </div>
+}
+else
+{
+    <div class="row">
+
+        <div class="col-md-12">
+            <p>Please log in to continue.</p>
+        </div>
+    </div>
+}
